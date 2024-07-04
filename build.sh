@@ -25,4 +25,4 @@ RELEASE="$(rpm -E %fedora)"
 # Add Papirus icon theme and userspace driver for Corsair mice
 rpm-ostree install papirus-icon-theme ckb-next
 # Nuke nano from orbit
-#rpm-ostree remove default-editor nano-default-editor nano
+rpm-ostree remove default-editor nano-default-editor nano
