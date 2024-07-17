@@ -34,4 +34,4 @@ rpm-ostree uninstall default-editor nano-default-editor nano input-leap input-re
 
 # Export ViM as $EDITOR in /etc/profile.d/
 # Used for system-level root tasks, such as sudoedit or visudo
-# rpm-ostree install vim-default-editor
+rpm-ostree install vim-default-editor
