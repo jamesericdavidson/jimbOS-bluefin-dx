@@ -22,7 +22,9 @@ RELEASE="$(rpm -E %fedora)"
 
 #systemctl enable podman.socket
 
-# Add Papirus icon theme and userspace driver for Corsair mice
+# Add (in order):
+# The Papirus icon theme
+# A userspace driver for Corsair gaming mice
 rpm-ostree install papirus-icon-theme ckb-next
 # Nuke nano from orbit
 rpm-ostree remove default-editor nano-default-editor nano
