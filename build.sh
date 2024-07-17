@@ -22,7 +22,17 @@ RELEASE="$(rpm -E %fedora)"
 
 #systemctl enable podman.socket
 
-# Add Papirus icon theme and userspace driver for Corsair mice
+# Add (in order):
+# The Papirus icon theme
+# A userspace driver for Corsair gaming mice
 rpm-ostree install papirus-icon-theme ckb-next
-# Nuke nano from orbit
-#rpm-ostree remove default-editor nano-default-editor nano
+systemctl enable ckb-next-daemon.service
+
+# Remove (in order):
+# The nano text editor (install nano via homebrew, or to containers as needed)
+# input-* packages (overlay packages; not present in uBlue main)
+rpm-ostree uninstall default-editor nano-default-editor nano input-leap input-remapper
+
+# Export ViM as $EDITOR in /etc/profile.d/
+# Used for system-level root tasks, such as sudoedit or visudo
+rpm-ostree install vim-default-editor
