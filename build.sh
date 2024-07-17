@@ -26,6 +26,7 @@ RELEASE="$(rpm -E %fedora)"
 # The Papirus icon theme
 # A userspace driver for Corsair gaming mice
 rpm-ostree install papirus-icon-theme ckb-next
+systemctl enable ckb-next-daemon.service
 
 # Remove (in order):
 # The nano text editor (install nano via homebrew, or to containers as needed)
