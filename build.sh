@@ -26,14 +26,10 @@ RELEASE="$(rpm -E %fedora)"
 # The Papirus icon theme
 # A userspace driver for Corsair gaming mice
 # Debian Almquist SHell (for POSIX compliance and speed)
-rpm-ostree install papirus-icon-theme ckb-next dash
+# Neovim (for reliability when performing system-level tasks)
+rpm-ostree install papirus-icon-theme ckb-next dash neovim
 systemctl enable ckb-next-daemon.service
 
 # Remove (in order):
 # The nano text editor (install nano via homebrew, or to containers as needed)
-# input-* packages (overlay packages; not present in uBlue main)
-rpm-ostree uninstall default-editor nano-default-editor nano input-leap input-remapper
-
-# Export ViM as $EDITOR in /etc/profile.d/
-# Used for system-level root tasks, such as sudoedit or visudo
-rpm-ostree install vim-default-editor
+rpm-ostree uninstall default-editor nano-default-editor nano
