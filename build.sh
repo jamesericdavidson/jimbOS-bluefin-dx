@@ -26,7 +26,8 @@ RELEASE="$(rpm -E %fedora)"
 # The Papirus icon theme
 # A userspace driver for Corsair gaming mice
 # Debian Almquist SHell (for POSIX compliance and speed)
-rpm-ostree install papirus-icon-theme ckb-next dash
+# Neovim (for reliability when performing system-level tasks)
+rpm-ostree install papirus-icon-theme ckb-next dash neovim
 systemctl enable ckb-next-daemon.service
 
 # Remove (in order):
