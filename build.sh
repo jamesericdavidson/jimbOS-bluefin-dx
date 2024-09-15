@@ -31,7 +31,3 @@ systemctl enable ckb-next-daemon.service
 # Remove (in order):
 # The nano text editor (install nano via homebrew, or to containers as needed)
 rpm-ostree uninstall default-editor nano-default-editor nano
-
-# Export ViM as $EDITOR in /etc/profile.d/
-# Used for system-level root tasks, such as sudoedit or visudo
-rpm-ostree install vim-default-editor
