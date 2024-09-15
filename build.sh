@@ -30,8 +30,7 @@ systemctl enable ckb-next-daemon.service
 
 # Remove (in order):
 # The nano text editor (install nano via homebrew, or to containers as needed)
-# input-* packages (overlay packages; not present in uBlue main)
-rpm-ostree uninstall default-editor nano-default-editor nano input-leap input-remapper
+rpm-ostree uninstall default-editor nano-default-editor nano
 
 # Export ViM as $EDITOR in /etc/profile.d/
 # Used for system-level root tasks, such as sudoedit or visudo
