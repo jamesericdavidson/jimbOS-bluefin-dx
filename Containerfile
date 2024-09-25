@@ -59,4 +59,5 @@ RUN mkdir -p /var/lib/alternatives && \
 # - All RUN commands must end with ostree container commit
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
+COPY abt /usr/bin
 COPY jimbOS_profile.sh /etc/profile.d/
