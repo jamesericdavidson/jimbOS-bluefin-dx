@@ -1,0 +1,11 @@
+#! /usr/bin/env dash
+
+# https://universal-blue.discourse.group/t/setting-up-a-distrobox/44#p-50-using-the-hosts-xdg-open-inside-distrobox-4
+
+#if [ ! -e /run/.containerenv ] && [ ! -e /.dockerenv ]; then # if not inside a container
+if [ ! -e /run/.containerenv ]
+then # if not inside a container
+    /usr/bin/xdg-open "$@" # run xdg-open normally
+else
+    distrobox-host-exec /usr/bin/xdg-open "$@" # run xdg-open on the host
+fi

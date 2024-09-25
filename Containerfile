@@ -60,4 +60,5 @@ RUN mkdir -p /var/lib/alternatives && \
 #   see: https://coreos.github.io/rpm-ostree/container/#using-ostree-container-commit
 
 ADD https://codeberg.org/jamesericdavidson/abt.git /usr/local/bin
+COPY xdg-open /usr/local/bin
 COPY jimbOS_profile.sh /etc/profile.d/
