@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /usr/bin/env dash
 
 set -ouex pipefail
 
