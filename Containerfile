@@ -12,6 +12,4 @@ RUN mkdir -p /var/lib/alternatives && \
 RUN rm -f /usr/share/glib-2.0/schemas/zz0-bluefin-modifications.gschema.override && \
     ostree container commit
 
-ADD https://codeberg.org/jamesericdavidson/abt.git /usr/local/bin/
-COPY xdg-open /usr/local/bin/
 COPY jimbOS_profile.sh /etc/profile.d/
